@@ -10,14 +10,14 @@ const socketHandler = require('./sockets/socketHandler');
 const app = express();
 const server = http.createServer(app);
 
-// 🌐 CORS Setup
+ //CORS Setup
 app.use(cors({
-  origin: '*',
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST'],
 }));
-
-app.use(express.json());
 const users = {};
+app.use(express.json());
+
 
 // ⏱️ Rate Limiting for HTTP API (not for socket)
 const limiter = rateLimit({
@@ -50,10 +50,11 @@ app.post('/api/register', (req, res) => {
 // 🔐 Middleware: Verify Token (for REST endpoint demo)
 app.use('/api/protected', (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
+  console.log("Token :", req.headers.authorization);
   if (!token) return res.status(401).json({ error: "Token diperlukan" });
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) return res.status(403).json({ error: "Token tidak valid" });
+    if (err) return res.status(403).json({ error: token });
     req.user = decoded;
     next();
   });
@@ -70,7 +71,7 @@ app.get('/api/protected', (req, res) => {
 // 🔌 Socket.IO Setup
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST'],
   }
 });
