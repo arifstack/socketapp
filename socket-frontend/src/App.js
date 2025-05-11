@@ -44,8 +44,7 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Routes>
+      <Routes>
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register onRegister={handleRegister} />} />
           <Route
@@ -65,7 +64,6 @@ function App() {
             }
           />
         </Routes>
-      </div>
     </Router>
   );
 }
