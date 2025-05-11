@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/ChatPage.css';
 import ChatList from '../components/ChatList';
+import ChatMessage from '../components/ChatMessage';
 import { FaCheckDouble } from 'react-icons/fa';
 
 function ChatPage({ socket }) {
@@ -33,6 +34,7 @@ function ChatPage({ socket }) {
       time: 'Just now',
       roomId: 1,
     },
+    
     // ...more mock data
   ];
 
@@ -93,10 +95,8 @@ function ChatPage({ socket }) {
 
         {/* Messages */}
         <div className="chat-messages">
-          {messages.map((msg, i) => (
-            <div key={i} className="message">
-              <strong>{msg.sender}:</strong> {msg.message}
-            </div>
+        {chatData.map(chat => (
+            <ChatMessage/>
           ))}
         </div>
 

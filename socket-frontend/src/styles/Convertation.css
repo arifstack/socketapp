@@ -1,0 +1,77 @@
+.chat-conversation {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow-y: auto;
+    font-family: sans-serif;
+  }
+  
+  /* Umum untuk semua pesan */
+  .message {
+    max-width: 85%;
+    margin-bottom: 12px;
+    position: relative;
+    padding: 10px 12px 22px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    word-wrap: break-word;
+    line-height: 1.5;
+  }
+  
+  .message-content {
+    position: relative;
+  }
+  
+  /* Meta info: waktu + ceklis */
+  .message-meta {
+    position: absolute;
+    bottom: -5px;
+    right: 2px;
+    display: flex;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: #ccc;
+  }
+  
+  .message-meta .check {
+    color: #53bdeb;
+  }
+  
+  /* Pesan dari pengirim */
+  .sender {
+    align-self: flex-end;
+    background-color: #075e54;
+    border-bottom-right-radius: 0;
+  }
+  
+  .sender::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #075e54;
+    border-left: 10px solid transparent;
+  }
+  
+  /* Pesan dari penerima */
+  .receiver {
+    align-self: flex-start;
+    background-color: #202c33;
+    border-bottom-left-radius: 0;
+  }
+  
+  .receiver::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #202c33;
+    border-right: 10px solid transparent;
+  }
+  
