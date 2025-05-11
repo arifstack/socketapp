@@ -1,0 +1,89 @@
+/* Kontainer utama */
+.register-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  border: none;
+}
+
+/* Gambar vector di sebelah kiri (60%) */
+.register-left {
+  flex: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vector-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Register di sebelah kanan (40%) */
+.register-right {
+  flex: 40%;
+  padding: 20px;
+  background-color: #fff;
+  border: 0px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.register-right h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.register-right input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.register-right button:hover {
+  background-color: #5a6268;
+}
+
+button-register {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #190ee4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button-register:hover {
+  background-color: #5650bd;
+}
+
+/* Style untuk button-login */
+button-login {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #c04713;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button-login:hover {
+  background-color: #dc7209;
+}

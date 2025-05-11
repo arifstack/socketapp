@@ -1,0 +1,16 @@
+/* Reset dan atur gaya input dan button */
+input, button {
+    border: 2px solid #d8d9da; /* Border berwarna biru */
+    outline: none; /* Menonaktifkan outline untuk menghindari underline di Safari */
+    padding: 10px;
+    font-size: 1rem; /* Sesuaikan ukuran font */
+    width: 100%;
+    box-sizing: border-box; /* Menjamin padding tidak mempengaruhi lebar */
+  }
+  
+  /* Gaya fokus untuk input dan button */
+  input:focus, button:focus {
+    border-color: #0056b3; /* Mengubah warna border saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek fokus */
+  }
+  

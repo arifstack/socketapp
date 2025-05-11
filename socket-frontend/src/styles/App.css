@@ -1,0 +1,49 @@
+/* Styling untuk chat page */
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .message-list {
+    overflow-y: auto;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .message {
+    margin: 10px 0;
+  }
+  
+  .my-message {
+    text-align: right;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .chat-input button {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #128c7e;
+  }
+  
